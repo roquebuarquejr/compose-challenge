@@ -41,6 +41,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.data.PuppyDto
 import kotlin.math.ceil
 
@@ -61,8 +62,9 @@ fun PuppyListItem(puppy: PuppyDto, callback: (Long) -> Unit) {
 
         ) {
             val (image, avatar, subject, name, steps, instagram) = createRefs()
+            val coverImage :Painter = painterResource(id = puppy.cover)
             Image(
-                painter = painterResource(id = puppy.cover),
+                painter = coverImage,
                 contentDescription = puppy.name,
                 contentScale = ContentScale.FillWidth,
                 modifier = Modifier
