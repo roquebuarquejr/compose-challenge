@@ -49,6 +49,7 @@ import kotlin.math.ceil
 fun PuppyListItem(puppy: PuppyDto, callback: (Long) -> Unit) {
 
     Surface(
+
         modifier = Modifier.padding(4.dp),
         color = MaterialTheme.colors.surface,
         elevation = 2.dp,
